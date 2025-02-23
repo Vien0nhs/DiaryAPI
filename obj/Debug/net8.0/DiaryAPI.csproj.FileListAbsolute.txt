@@ -286,3 +286,4 @@ D:\TaiLieu\Angular\Repositories\DiaryAPI\bin\Debug\net8.0\runtimes\win\lib\net7.
 D:\TaiLieu\Angular\Repositories\DiaryAPI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 D:\TaiLieu\Angular\Repositories\DiaryAPI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 D:\TaiLieu\Angular\Repositories\DiaryAPI\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+D:\TaiLieu\Angular\Repositories\DiaryAPI\obj\Debug\net8.0\DiaryAPI.sourcelink.json
