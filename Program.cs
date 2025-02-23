@@ -2,6 +2,11 @@ using DiaryAPI.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+
+builder.WebHost.UseUrls($"http://*:{port}");
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
@@ -20,6 +25,8 @@ builder.Services.AddDbContext<DiaryDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DiaryConnection")));
 
 var app = builder.Build();
+
+app.MapGet("/", () => "Hello from Railway!");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

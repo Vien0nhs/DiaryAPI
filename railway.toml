@@ -1,0 +1,4 @@
+[build]
+builder = "NIXPACKS"
+[build.env]
+DOTNET_VERSION = "8.0"
