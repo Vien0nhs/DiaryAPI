@@ -70,7 +70,8 @@
               "RelativeToolTip": "Dockerfile",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-23T07:12:41.765Z"
+              "WhenOpened": "2025-02-23T07:12:41.765Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -128,7 +129,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\TaiLieu\\Angular\\Repositories\\DiaryAPI\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-17T01:50:18.379Z",
               "EditorCaption": ""
