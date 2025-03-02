@@ -52,7 +52,7 @@ app.UseExceptionHandler(errorApp =>
 	});
 });
 
-//app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
 app.UseCors("AllowAll");
 
@@ -61,9 +61,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
-builder.WebHost.UseKestrel(options =>
-{
-	options.ListenAnyIP(int.Parse(port));
-});
 app.Run($"http://0.0.0.0:{port}");
-
