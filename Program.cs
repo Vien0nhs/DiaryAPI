@@ -65,5 +65,5 @@ builder.WebHost.UseKestrel(options =>
 {
 	options.ListenAnyIP(int.Parse(port));
 });
-app.Run();
+app.Run($"http://0.0.0.0:{port}");
 
