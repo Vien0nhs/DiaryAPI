@@ -1,4 +1,4 @@
-using DiaryAPI.Data;
+﻿using DiaryAPI.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,6 +29,28 @@ app.MapGet("/", () => "Hello from Railway!");
 app.UseSwagger();
 app.UseSwaggerUI();
 
+app.UseExceptionHandler(errorApp =>
+{
+	errorApp.Run(async context =>
+	{
+		context.Response.StatusCode = 500;
+		context.Response.ContentType = "application/json";
+
+		var errorFeature = context.Features.Get<Microsoft.AspNetCore.Diagnostics.IExceptionHandlerFeature>();
+		if (errorFeature != null)
+		{
+			var exception = errorFeature.Error;
+			var errorResponse = new
+			{
+				StatusCode = 500,
+				Message = "Internal Server Error",
+				Detail = exception.Message, // Trả về thông điệp lỗi chi tiết
+				StackTrace = exception.StackTrace // Trả về stack trace để debug
+			};
+			await context.Response.WriteAsJsonAsync(errorResponse);
+		}
+	});
+});
 
 app.UseHttpsRedirection();
 
